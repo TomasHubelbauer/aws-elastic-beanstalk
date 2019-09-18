@@ -6,16 +6,11 @@
     <RootNamespace>aws_elastic_beanstalk</RootNamespace>
   </PropertyGroup>
 
-
-  <ItemGroup>
-    <None Update="app.db" CopyToOutputDirectory="PreserveNewest" />
-  </ItemGroup>
-
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.0.0-rc1.19457.4" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.0.0-rc1.19457.4" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.0.0-rc1.19457.4" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="2.2.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="3.0.0-rc1.19456.14" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.0.0-rc1.19456.14" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.0.0-rc1.19456.14" />
   </ItemGroup>
