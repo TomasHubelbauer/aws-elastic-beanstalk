@@ -11,6 +11,7 @@
 - Replace `AddDbContext` with
   `services.AddDbContext<ApplicationDbContext>(options => options.UseInMemoryDatabase(nameof(aws_elastic_beanstalk)))`
 - *Could not load type 'Microsoft.EntityFrameworkCore.Infrastructure.IDbContextOptionsExtensionWithDebugInfo' from assembly 'Microsoft.EntityFrameworkCore, Version=3.0.0.0*
+- https://github.com/aspnet/EntityFrameworkCore/issues/17917
 
 ## To-Do
 
