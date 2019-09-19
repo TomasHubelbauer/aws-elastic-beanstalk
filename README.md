@@ -58,3 +58,6 @@ Add info on using SQLite on the EC2 instance (file based).
 Add info on connecting with RDS (managed).
 
 Add info on carrying out migrations in EF Core.
+
+Add info on using the t2.micro instance type to stay within the free tier for people
+whom this applies to.
