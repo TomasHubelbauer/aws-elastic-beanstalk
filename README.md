@@ -52,3 +52,9 @@ so that each `dotnet deploy` automatically places the AWS manifest file in `publ
 Add instructions for uploading using the AWS CLI.
 
 Set up a workflow for publishing to EB from GitHub Actions using the AWS CLI.
+
+Add info on using SQLite on the EC2 instance (file based).
+
+Add info on connecting with RDS (managed).
+
+Add info on carrying out migrations in EF Core.
