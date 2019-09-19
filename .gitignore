@@ -1,3 +1,6 @@
 # .NET
 bin
 obj
+
+# AWS
+awsebs.zip

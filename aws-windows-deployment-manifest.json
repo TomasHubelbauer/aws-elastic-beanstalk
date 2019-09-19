@@ -1,0 +1,14 @@
+{
+  "manifestVersion": 1,
+  "deployments": {
+    "aspNetCoreWeb": [
+      {
+        "name": "aws_elastic_beanstalk",
+        "parameters": {
+          "appBundle": ".",
+          "iisPath": "/"
+        }
+      }
+    ]
+  }
+}

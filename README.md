@@ -18,36 +18,16 @@
 - Publish using `dotnet publish -r win-x64 --self-contained` because Elastic
   Beanstalk probably has a different runtime version so we need to produce a
   self-hosted package to avoid the *ANCM In-Process Handler Load Failure* error
-- Archive the contents of `bin/Debug/netcoreapp3.0/win-x64/publish` together
-  with the following `aws-windows-deployment-manifest.json` file and upload it
-  to Elastic Beanstalk:
-  ```json
-  {
-    "manifestVersion": 1,
-    "deployments": {
-      "aspNetCoreWeb": [
-        {
-          "name": "aws_elastic_beanstalk",
-          "parameters": {
-            "appBundle": ".",
-            "iisPath": "/"
-          }
-        }
-      ]
-    }
-  }
-  ```
+- Run `Compress-Archive bin\Debug\netcoreapp3.0\win-x64\publish awsebs.zip` to
+  produce an archive of a source code version for EBS
 - Go to https://us-east-2.console.aws.amazon.com/elasticbeanstalk/home and click
   *Get started*
 - Select .NET as platform, select *Upload your code* and select the archive
+- Wait for the app to spin up and go to *Configure* and switch to free t2.micro
+  to remain on the free tier
 - Retry end to end on http://awsebs-env.izbp7iptq3.us-east-2.elasticbeanstalk.com
 
 ## To-Do
-
-Add `aws-windows-deployment-manifest.json` to root and add
-`<ItemGroup><None Source="aws-windows-deployment-manifest.json" CopyToOutput="Always"></ItemGroup>`
-(like the snippet for `app.db` which was removed from `aws_elastic_beanstalk` prior)
-so that each `dotnet deploy` automatically places the AWS manifest file in `publish`.
 
 Add instructions for uploading using the AWS CLI.
 
@@ -58,6 +38,3 @@ Add info on using SQLite on the EC2 instance (file based).
 Add info on connecting with RDS (managed).
 
 Add info on carrying out migrations in EF Core.
-
-Add info on using the t2.micro instance type to stay within the free tier for people
-whom this applies to.
