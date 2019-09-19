@@ -44,6 +44,11 @@
 
 ## To-Do
 
+Add `aws-windows-deployment-manifest.json` to root and add
+`<ItemGroup><None Source="aws-windows-deployment-manifest.json" CopyToOutput="Always"></ItemGroup>`
+(like the snippet for `app.db` which was removed from `aws_elastic_beanstalk` prior)
+so that each `dotnet deploy` automatically places the AWS manifest file in `publish`.
+
 Add instructions for uploading using the AWS CLI.
 
 Set up a workflow for publishing to EB from GitHub Actions using the AWS CLI.
