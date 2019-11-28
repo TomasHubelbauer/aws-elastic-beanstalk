@@ -29,17 +29,17 @@
 
 ## To-Do
 
-Add instructions for uploading using the AWS CLI.
+### Add instructions for uploading using the AWS CLI
 
 - `pip install awscli` https://aws.amazon.com/cli/
 - `aws configure` https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html
   - Same region as EBS
 - https://stackoverflow.com/a/41805285/2715716
 
-Set up a workflow for publishing to EB from GitHub Actions using the AWS CLI.
+### Set up a workflow for publishing to EB from GitHub Actions using the AWS CLI
 
-Add info on using SQLite on the EC2 instance (file based).
+### Add info on using SQLite on the EC2 instance (file based)
 
-Add info on connecting with RDS (managed).
+### Add info on connecting with RDS (managed)
 
-Add info on carrying out migrations in EF Core.
+### Add info on carrying out migrations in EF Core
